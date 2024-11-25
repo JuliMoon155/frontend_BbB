@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import LikeIcon from '../imgTemp/icons8-me-gusta-50.png';
-import DislikeIcon from '../imgTemp/icons8-me-gusta-relleno-50.png';
-import CommentIcon from '../imgTemp/icon-comment.png';
-import FilledCommentIcon from '../imgTemp/icon-comment-clicked.png';
-import ShareIcon from '../imgTemp/icon-share.png';
-import UserIcon from '../imgTemp/icons8-usuario-50.png';
+import LikeIcon from '../images/icons8-me-gusta-50.png';
+import DislikeIcon from '../images/icons8-me-gusta-relleno-50.png';
+import CommentIcon from '../images/icon-comment.png';
+import FilledCommentIcon from '../images/icon-comment-clicked.png';
+import ShareIcon from '../images/icon-share.png';
+import UserIcon from '../images/icons8-usuario-50.png';
 
 
 export const Contenido = ({ userId, usuario}) => {
