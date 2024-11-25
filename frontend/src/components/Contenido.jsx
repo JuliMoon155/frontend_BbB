@@ -26,7 +26,7 @@ const [dislikeStates, setDislikeStates] = useState([]);
 
   const fetchPublicaciones = async () => {
     try {
-      const endpoint = 'http://localhost:5000/api/ObPublicacionesBen';
+      const endpoint = process.env.REACT_APP_API_URL + '/ObPublicacionesBen';
       const response = await fetch(endpoint, { method: 'GET' });
       if (!response.ok) throw new Error('Error al obtener publicaciones');
       
@@ -47,7 +47,7 @@ const [dislikeStates, setDislikeStates] = useState([]);
     });
 
     try {
-      const endpoint = 'http://localhost:5000/api/publicaciones/like';
+      const endpoint =  process.env.REACT_APP_API_URL + '/publicaciones/like';
       const options = {
           method: newLikeState ? 'POST' : 'DELETE',
           headers: { 'Content-Type': 'application/json' },
@@ -88,7 +88,7 @@ const toggleCommentVisibility = (index) => {
     console.log("Publicación creada:", contenido);
     try{
         let datos = {contenido, fecha_publicacion, fk_idbeneficiario};
-        let endpoint = "http://localhost:5000/api/PublicacionesBen";
+        let endpoint =  process.env.REACT_APP_API_URL + 'PublicacionesBen';
 
         const response = await fetch(endpoint, {
             method: 'POST',
@@ -116,7 +116,7 @@ const toggleCommentVisibility = (index) => {
 
   const handleDelete = async (id) => {
     try {
-        const endpoint = `http://localhost:5000/api/EliminarPublicacion/${id}`;
+        const endpoint =  process.env.REACT_APP_API_URL + `EliminarPublicacion/${id}`;
         const response = await fetch(endpoint, {
             method: 'DELETE',
             headers: {

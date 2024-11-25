@@ -6,7 +6,7 @@ import {Header} from "./Header";
 export function VistaMaterialesPublicados({idEmpresa, cambiarInterfaz}) {
     const [materialesPorDonar, setMaterialesPorDonar] = useState([]);
     const buscarMaterialesPorDonar = async () => {
-        const respuestaBusqueda = await fetch("http://localhost:5000/api/buscarMaterialesPorDonar", {
+        const respuestaBusqueda = await fetch(process.env.REACT_APP_API_URL + '/buscarMaterialesPorDonar', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -22,7 +22,7 @@ export function VistaMaterialesPublicados({idEmpresa, cambiarInterfaz}) {
     };
 
     const cambiarCantidadMaterial = async (cantidad, idMaterial) => {
-        const respuestaCambio = await fetch("http://localhost:5000/api/SetCantidadMaterial", {
+        const respuestaCambio = await fetch(process.env.REACT_APP_API_URL + '/SetCantidadMaterial', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

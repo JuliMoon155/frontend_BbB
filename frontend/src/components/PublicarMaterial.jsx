@@ -76,7 +76,7 @@ export const PublicacionMateriales = ({ userId, usuario, cambiarInterfaz }) => {
 
       const userId = 1; // Cambia esto según sea necesario
       // 1. Crear la publicación principal
-      const responsePublicacion = await fetch('http://localhost:5000/api/crearpublicacion', {
+      const responsePublicacion = await fetch(process.env.REACT_APP_API_URL + '/crearpublicacion', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ export const PublicacionMateriales = ({ userId, usuario, cambiarInterfaz }) => {
 
       // 2. Crear los materiales asociados
       for (const material of materiales) {
-        const responseMaterial = await fetch('http://localhost:5000/api/crearMaterial', {
+        const responseMaterial = await fetch(process.env.REACT_APP_API_URL + '/crearMaterial', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -131,7 +131,7 @@ export const PublicacionMateriales = ({ userId, usuario, cambiarInterfaz }) => {
             formData.append('imagen', archivoImagen);
             formData.append('idMaterial', idMaterial);
 
-            const responseImagen = await fetch('http://localhost:5000/api/crearimagen', {
+            const responseImagen = await fetch(process.env.REACT_APP_API_URL +'/crearimagen', {
               method: 'POST',
               body: formData,
             });

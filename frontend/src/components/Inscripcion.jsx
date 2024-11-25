@@ -15,7 +15,7 @@ const Inscripcion = ({ userId, fk_idPublicacionDon, cambiarInterfaz }) => {
     e.preventDefault();
     if (aceptaTerminos) {
       try {
-        const response = await fetch('http://localhost:5000/api/CrearInscripcion', {
+        const response = await fetch(process.env.REACT_APP_API_URL + '/CrearInscripcion', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

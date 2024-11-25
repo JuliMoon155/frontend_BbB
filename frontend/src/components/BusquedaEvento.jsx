@@ -48,7 +48,7 @@ function BusquedaEvento() {
                             cantidad_minima: elementoMinimaCantidad.value === "" ? "-1" : elementoMinimaCantidad.value,
                             cantidad_maxima: elementoMaximaCantidad.value === "" ? "-1" : elementoMaximaCantidad.value,
                         }
-                        const respuestaBusqueda = await fetch("http://localhost:5000/api/BuscarPublicacion", {
+                        const respuestaBusqueda = await fetch( process.env.REACT_APP_API_URL + '/BuscarPublicacion', {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json",
