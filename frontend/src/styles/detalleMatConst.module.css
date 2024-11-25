@@ -1,0 +1,50 @@
+/* .container-popup{ 
+  display: inline;  
+}
+.elPopUp{
+  background-color: #fff;
+}
+
+.material{
+  display: inline;
+  border-bottom: 3px solid #000;  
+  background-color: #fff; 
+  width: 200px;
+  height: 550px;
+  position: relative;
+}
+
+img{
+  align-items: center;
+  width: 250px;
+  height: 250px;
+}
+.info {
+  width: 100%;
+  float: left;
+}
+.btn-detalle-material{
+  place-items: center;
+}
+.h1tit {
+  color: #874328;
+  text-align: center;
+}
+.cantp, .statusp, .descriptionp{
+  font-size: 24px;
+  font-weight: 100;
+  text-align: center;
+}  
+.detalle-material-btn{
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+} */
