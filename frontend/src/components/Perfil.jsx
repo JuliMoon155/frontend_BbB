@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/HeaderPrincipal.css'
 import '../styles/Perfil.css'
-import fotoPerfil from '../imgTemp/foto.jpeg'
+import fotoPerfil from '../images/foto.jpeg'
 
 export const Perfil = () => {
   return (

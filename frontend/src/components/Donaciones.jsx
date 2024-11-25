@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import VistaPreviaEvento from "./VistaPreviaEvento";
-import iconoFiltro from '../imgTemp/icons8-filter-solo.png';
+import iconoFiltro from '../images/icons8-filter-solo.png';
 
 export function Donaciones( {inscript} ) {
     const categoriasDisponibles = ["aglomerantes", "aglomerados", "metálicos", "orgánicos"];
