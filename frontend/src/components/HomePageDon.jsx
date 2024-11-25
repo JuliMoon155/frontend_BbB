@@ -4,7 +4,7 @@ import { Contenido } from './Contenido';
 import  '../styles/HomePage.css';
 
 import {Donaciones} from "./Donaciones";
-import profileDefault from '../imgTemp/profileDefault.png';
+import profileDefault from '../images/profileDefault.png';
 
 
 export const HomePage = ({ userId, usuario, userRol, data}) => {
