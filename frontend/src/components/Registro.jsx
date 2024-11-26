@@ -53,7 +53,7 @@ export const Registro = ({ onLogin }) => {
                     password,
                     Fecha_nacimiento: fechaNacimiento 
                 };
-                endpoint = process.env.REACT_APP_API_URL + '/Beneficiarios';
+                endpoint = import.meta.env.VITE_BACKEND_URL + '/Beneficiarios';
             } else if (rol === 'Empresario') {
                 datos = {
                     nombre,
@@ -61,7 +61,7 @@ export const Registro = ({ onLogin }) => {
                     descripcion,
                     usuario
                 };
-                endpoint = process.env.REACT_APP_API_URL + '/Empresas';
+                endpoint = import.meta.env.VITE_BACKEND_URL + '/Empresas';
             }
             
             const response = await fetch(endpoint, {

@@ -4,7 +4,7 @@ import "../styles/Login.css";
 
 export const Login = ({ onRegistro, onLoginSuccess }) => {
   const [credentials, setCredentials] = useState({ usuario: '', password: '' });
-  const [endpoint, setEndpoint] = useState(process.env.REACT_APP_API_URL + 'ObBeneficiarios');
+  const [endpoint, setEndpoint] = useState(import.meta.env.VITE_BACKEND_URL +'/ObBeneficiarios');
   const [error, setError] = useState('');
   const [rol, setRol] = useState('Beneficiario');
   const [textoCambioRol, setTextoCambioRol] = useState('Para Empresas');
@@ -18,11 +18,11 @@ export const Login = ({ onRegistro, onLoginSuccess }) => {
   const handelClickCambioRol = () =>{
     if (textoCambioRol === 'Para Empresas') {
       setRol('Empresario')
-      setEndpoint(process.env.REACT_APP_API_URL + '/ObEmpresas')
+      setEndpoint(import.meta.env.VITE_BACKEND_URL + '/ObEmpresas')
       setTextoCambioRol('Para Beneficiarios')
     }else if (textoCambioRol === 'Para Beneficiarios') {
       setRol('Beneficiario')
-      setEndpoint(process.env.REACT_APP_API_URL + '/ObBeneficiarios')
+      setEndpoint(import.meta.env.VITE_BACKEND_URL + '/ObBeneficiarios')
       setTextoCambioRol('Para Empresas')
     };
   };

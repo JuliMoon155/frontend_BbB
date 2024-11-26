@@ -23,7 +23,7 @@ const [publicaciones, setPublicaciones] = useState([]);
     console.log("Publicación creada:", contenido);
     try{
         let datos = {contenido, fecha_publicacion, fk_idbeneficiario};
-        let endpoint = process.env.REACT_APP_API_URL + '/PublicacionesBen';
+        let endpoint = import.meta.env.VITE_BACKEND_URL + '/PublicacionesBen';
 
         const response = await fetch(endpoint, {
             method: 'POST',
@@ -52,7 +52,7 @@ const [publicaciones, setPublicaciones] = useState([]);
     const fetchPublicaciones = async () => {
       try {
 
-        let endpoint = process.env.REACT_APP_API_URL + '/ObPublicacionesBen';
+        let endpoint = import.meta.env.VITE_BACKEND_URL + '/ObPublicacionesBen';
 
         const response = await fetch(endpoint, {
           method: 'GET',
